@@ -4,12 +4,13 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import { LanguageProvider } from "@/contexts/language-context"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Waiz - Smart IT, Powered by AI",
+  title: "wAIz - Smart IT, Powered by AI",
   description:
-    "Transform your business with intelligent IT solutions. Waiz combines cutting-edge AI technology with expert IT services to drive innovation and efficiency.",
+    "Transform your business with intelligent IT solutions. wAIz combines cutting-edge AI technology with expert IT services to drive innovation and efficiency.",
   generator: "v0.app",
 }
 
@@ -19,9 +20,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
-        <Suspense fallback={null}>{children}</Suspense>
+        <LanguageProvider>
+          <Suspense fallback={null}>{children}</Suspense>
+        </LanguageProvider>
         <Analytics />
       </body>
     </html>
