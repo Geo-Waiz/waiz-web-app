@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Brain, Shield, Zap, Users, CheckCircle, Star } from "lucide-react"
+import { WaizLogo } from "@/components/waiz-logo"
 
 export default function HomePage() {
   return (
@@ -10,12 +11,7 @@ export default function HomePage() {
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                <Brain className="h-5 w-5 text-primary-foreground" />
-              </div>
-              <span className="text-xl font-bold text-foreground">Waiz</span>
-            </div>
+            <WaizLogo />
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
                 Services
@@ -41,19 +37,20 @@ export default function HomePage() {
               AI-Powered Solutions
             </Badge>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance mb-6">
-              Smart IT, <span className="text-primary">Powered by AI</span>
+              Smart IT & Automation, <span className="text-primary">Powered by AI</span>
             </h1>
             <p className="text-xl text-muted-foreground text-pretty mb-8 max-w-2xl mx-auto">
-              Transform your business with intelligent IT solutions. We combine cutting-edge AI technology with expert
-              IT services to drive innovation and efficiency.
+              Transform your business with intelligent IT solutions and automation services. We put{" "}
+              <span className="font-semibold text-primary">AI at the core</span> of everything we do to drive
+              innovation, efficiency, and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8">
-                Start Your Transformation
+                Start Your AI Transformation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
-                Learn More
+                Discover AI Solutions
               </Button>
             </div>
           </div>
@@ -64,31 +61,34 @@ export default function HomePage() {
       <section id="services" className="py-20 bg-accent/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Our AI-Enhanced Services</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">AI-Driven IT & Automation Services</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Discover how our intelligent solutions can revolutionize your IT infrastructure
+              Discover how our <span className="font-semibold text-primary">AI-first approach</span> revolutionizes your
+              IT infrastructure and business processes
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="border-2 hover:border-primary/50 transition-colors">
               <CardHeader>
                 <Brain className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>AI Infrastructure</CardTitle>
-                <CardDescription>Intelligent systems that learn and adapt to your business needs</CardDescription>
+                <CardTitle>AI-Powered Infrastructure</CardTitle>
+                <CardDescription>
+                  Intelligent systems that learn, adapt, and optimize your IT environment automatically
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm">
                     <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                    Automated monitoring & optimization
+                    AI-driven monitoring & optimization
                   </li>
                   <li className="flex items-center text-sm">
                     <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                    Predictive maintenance
+                    Predictive maintenance with ML
                   </li>
                   <li className="flex items-center text-sm">
                     <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                    Smart resource allocation
+                    Intelligent resource allocation
                   </li>
                 </ul>
               </CardContent>
@@ -97,22 +97,24 @@ export default function HomePage() {
             <Card className="border-2 hover:border-primary/50 transition-colors">
               <CardHeader>
                 <Shield className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>Intelligent Security</CardTitle>
-                <CardDescription>AI-powered cybersecurity that stays ahead of threats</CardDescription>
+                <CardTitle>AI Security & Compliance</CardTitle>
+                <CardDescription>
+                  Advanced AI algorithms that protect your business from evolving cyber threats
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm">
                     <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                    Real-time threat detection
+                    AI threat detection & response
                   </li>
                   <li className="flex items-center text-sm">
                     <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                    Automated incident response
+                    Automated incident remediation
                   </li>
                   <li className="flex items-center text-sm">
                     <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                    Behavioral analysis
+                    Behavioral pattern analysis
                   </li>
                 </ul>
               </CardContent>
@@ -121,22 +123,24 @@ export default function HomePage() {
             <Card className="border-2 hover:border-primary/50 transition-colors">
               <CardHeader>
                 <Zap className="h-12 w-12 text-primary mb-4" />
-                <CardTitle>Smart Automation</CardTitle>
-                <CardDescription>Streamline operations with intelligent process automation</CardDescription>
+                <CardTitle>Intelligent Automation</CardTitle>
+                <CardDescription>
+                  AI-powered process automation that transforms how your business operates
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm">
                     <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                    Workflow optimization
+                    AI workflow optimization
                   </li>
                   <li className="flex items-center text-sm">
                     <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                    Intelligent task routing
+                    Smart decision automation
                   </li>
                   <li className="flex items-center text-sm">
                     <CheckCircle className="h-4 w-4 text-primary mr-2" />
-                    Performance analytics
+                    Predictive analytics & insights
                   </li>
                 </ul>
               </CardContent>
@@ -163,8 +167,8 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  "Waiz transformed our IT infrastructure with their AI solutions. We've seen 40% improvement in
-                  efficiency."
+                  "wAIz transformed our IT infrastructure with their AI solutions. We've seen 40% improvement in
+                  efficiency and 60% reduction in downtime."
                 </p>
                 <div className="flex items-center">
                   <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
@@ -186,8 +190,8 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  "The intelligent security solutions have given us peace of mind. Zero security incidents since
-                  implementation."
+                  "The AI-powered automation has revolutionized our operations. Zero security incidents and 50% faster
+                  response times since partnering with wAIz."
                 </p>
                 <div className="flex items-center">
                   <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
@@ -209,7 +213,8 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  "Outstanding support and innovative solutions. Waiz is our trusted technology partner."
+                  "Outstanding AI-driven support and innovative automation solutions. wAIz is our trusted technology
+                  partner for the future."
                 </p>
                 <div className="flex items-center">
                   <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-3">
@@ -229,20 +234,20 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Ready to Transform Your IT?</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Ready for AI-Powered Transformation?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Join hundreds of companies already benefiting from our AI-powered IT solutions
+            Join hundreds of companies already benefiting from our AI-driven IT solutions and intelligent automation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="text-lg px-8">
-              Schedule Consultation
+              Schedule AI Consultation
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="text-lg px-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
             >
-              View Case Studies
+              View AI Case Studies
             </Button>
           </div>
         </div>
@@ -253,21 +258,18 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                  <Brain className="h-5 w-5 text-primary-foreground" />
-                </div>
-                <span className="text-xl font-bold">Waiz</span>
-              </div>
-              <p className="text-muted-foreground">Smart IT solutions powered by artificial intelligence</p>
+              <WaizLogo className="mb-4" />
+              <p className="text-muted-foreground">
+                Smart IT solutions and automation powered by artificial intelligence
+              </p>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Services</h3>
+              <h3 className="font-semibold mb-4">AI Services</h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li>AI Infrastructure</li>
+                <li>AI-Powered Infrastructure</li>
                 <li>Intelligent Security</li>
                 <li>Smart Automation</li>
-                <li>Cloud Solutions</li>
+                <li>AI Cloud Solutions</li>
               </ul>
             </div>
             <div>
@@ -275,21 +277,21 @@ export default function HomePage() {
               <ul className="space-y-2 text-muted-foreground">
                 <li>About Us</li>
                 <li>Careers</li>
-                <li>Blog</li>
+                <li>AI Blog</li>
                 <li>Contact</li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold mb-4">Contact</h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li>hello@waiz.com</li>
+                <li>hello@waiz.ai</li>
                 <li>+1 (555) 123-4567</li>
                 <li>San Francisco, CA</li>
               </ul>
             </div>
           </div>
           <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 Waiz. All rights reserved.</p>
+            <p>&copy; 2024 wAIz. All rights reserved.</p>
           </div>
         </div>
       </footer>
